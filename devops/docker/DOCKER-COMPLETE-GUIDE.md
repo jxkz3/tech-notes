@@ -4,6 +4,8 @@
 
 ## INSTALLATION
 
+```bash
+
 # Ubuntu/Debian
 
 sudo apt update
@@ -55,9 +57,13 @@ docker rmi $(docker images -q) # Remove all images
 docker image prune # Remove unused
 docker image prune -a # Remove all unused
 
+```
+
 ## CONTAINER MANAGEMENT
 
 ### Create & Run Containers
+
+```bash
 
 docker run [OPTIONS] IMAGE [CMD]
 
@@ -134,7 +140,9 @@ docker rm $(docker ps -aq) # Remove all stopped
 docker container prune # Remove all stopped
 docker rm -v <container> # Remove with volumes
 
-## 🏗️ BUILD IMAGES (Dockerfile)
+```
+
+## BUILD IMAGES (Dockerfile)
 
 ### Dockerfile Template:
 
@@ -460,11 +468,11 @@ Regular system cleanup
 📚 ESSENTIAL FILES
 .dockerignore example:
 text
-node_modules
+node*modules
 .git
-_.log
+*.log
 .env
-Dockerfile_
+Dockerfile\_
 docker-compose*
 README.md
 .gitignore
